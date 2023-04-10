@@ -7,6 +7,7 @@ This project is a database management system for DreamHome, a property managemen
 1. Staff registration form: This feature allows new staff members to register with DreamHome by filling out a form with their personal and employment information.
 2. Branch office management: This feature allows each branch to manage its staff, including a manager, supervisors, and assistants.
 3. Property management: This feature allows DreamHome to manage the properties they rent out, including the property details, rental agreements, and rental payments.
+4. Comments: This feature allows the client to provide a comment describing the property for others after viewing the property. 
 
 ## Technologies Used
 
@@ -35,22 +36,15 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Ashish Jadhawar 
 21bcs015@iiitdwd.ac.in
-9356918857
 
 Ashish Lal 
-21bcs015@iiitdwd.ac.in
-9008779592
+21bcs017@iiitdwd.ac.in
 
 Abhishikt Mahajan
-21bcs015@iiitdwd.ac.in
-7400069955
+21bcs060@iiitdwd.ac.in
 
 Aditya Dev 
 21bcs004@iiitdwd.ac.in
-6202596108
 
 Aditya Sethiya
 21bcs005@iiitdwd.ac.in
-9929130153
-
-If you have any questions or feedback, please contact us at our-email-address.
