@@ -7,6 +7,7 @@ This project is a database management system for DreamHome, a property managemen
 1. Staff registration form: This feature allows new staff members to register with DreamHome by filling out a form with their personal and employment information.
 2. Branch office management: This feature allows each branch to manage its staff, including a manager, supervisors, and assistants.
 3. Property management: This feature allows DreamHome to manage the properties they rent out, including the property details, rental agreements, and rental payments.
+4. Comments: This feature allows the client to provide a comment describing the property for others after viewing the property. 
 
 ## Technologies Used
 
