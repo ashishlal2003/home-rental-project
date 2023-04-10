@@ -36,22 +36,15 @@ This project is licensed under the MIT License - see the LICENSE file for detail
 
 Ashish Jadhawar 
 21bcs015@iiitdwd.ac.in
-9356918857
 
 Ashish Lal 
-21bcs015@iiitdwd.ac.in
-9008779592
+21bcs017@iiitdwd.ac.in
 
 Abhishikt Mahajan
-21bcs015@iiitdwd.ac.in
-7400069955
+21bcs060@iiitdwd.ac.in
 
 Aditya Dev 
 21bcs004@iiitdwd.ac.in
-6202596108
 
 Aditya Sethiya
 21bcs005@iiitdwd.ac.in
-9929130153
-
-If you have any questions or feedback, please contact us at our-email-address.
