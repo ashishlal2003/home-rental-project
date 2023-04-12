@@ -40,3 +40,16 @@ INSERT INTO prop_registration (p_no, type, rooms, rent, address, own_no, name, p
 (900, 'Cash', 'N', '2022-11-01', '2023-10-31', '1 year'),
 (950, 'Credit Card', 'Y', '2022-12-01', '2023-05-31', '6 months');
 
+ 
+INSERT INTO branch_office (branch_number, branch_address, telephone_number) VALUES
+('B003', '163 Main St, Glasgow', 01412257025),
+('B005', '10 Princes St, Edinburgh', 01314788585),
+('B012', '21 Union St, Aberdeen', 01224632683),
+('B019', '12 High St, Inverness', 01463235477),
+('B025', '22 Castle St, Stirling', 01786476546),
+('B034', '5 King St, Perth', 01738476835),
+('B041', '8 Regent St, Dundee', 01382678934),
+('B048', '29 Hope St, Glasgow', 01412054065),
+('B055', '16 Hanover St, Edinburgh', 01316687692),
+('B063', '7 Albyn Pl, Aberdeen', 01224367587);
+
