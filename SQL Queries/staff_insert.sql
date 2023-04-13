@@ -31,17 +31,18 @@ INSERT INTO prop_registration (p_no, type, rooms, rent, address, own_no, name, p
 select * from payment_details;
 
  
-INSERT INTO branch_office (branch_number, branch_address, telephone_number) VALUES
-('B001', '163 Main St, Glasgow', 01412257025),
-('B002', '10 Princes St, Edinburgh', 01314788585),
-('B003', '21 Union St, Aberdeen', 01224632683),
-('B004', '12 High St, Inverness', 01463235477),
-('B005', '22 Castle St, Stirling', 01786476546),
-('B006', '5 King St, Perth', 01738476835),
-('B007', '8 Regent St, Dundee', 01382678934),
-('B008', '29 Hope St, Glasgow', 01412054065),
-('B009', '16 Hanover St, Edinburgh', 01316687692),
-('B010', '7 Albyn Pl, Aberdeen', 01224367587);
+INSERT INTO branch_office (branch_number, branch_address, telephone_number) VALUES 
+('B001', '55 Princes St, Edinburgh EH2 2HL', '01312265876/01312267489'),
+('B002', '34 Union St, Aberdeen AB11 5BN', '01224565543/01224561278'),
+('B003', '163 Main St, Glasgow G11 9QX', '01413392178/01413394439'),
+('B004', '23 High St, Inverness IV1 1JY', '01463278451/01463273691'),
+('B005', '83 King St, Dundee DD1 2ER', '01382637246/01382638945'),
+('B006', '5 Bridge St, Perth PH1 5LA', '01738674328/01738678901'),
+('B007', '12 George St, Stirling FK8 2BJ', '01786431245/01786436589'),
+('B008', '4 Queen St, Ayr KA7 1EH', '01292456897/01292451236'),
+('B009', '15 Chapel St, Paisley PA1 1ER', '01418876123/01418871234'),
+('B010', '27 Castle St, Elgin IV30 1BN', '01343567890/01343564321');
+
 
 select * from branch_office;
 
