@@ -9,7 +9,7 @@ position varchar(100),
 salary decimal(10,2),
 branch_number varchar(100),
 branch_address varchar(100),
-telephone_number varchar(15),
+telephone_number varchar(100),
 supervisor_name varchar(100),
 manager_start_date date,
 manager_bonus decimal(10,2));
