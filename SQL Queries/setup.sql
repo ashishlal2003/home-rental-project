@@ -46,9 +46,9 @@ duration varchar(100));
 
 
 
-create table branch_office(branch_number varchar(100),
+create table branch_office(branch_number varchar(4),
 branch_address varchar(100),
-telephone_number varchar(15));
+telephone_number varchar(100));
 
 Alter table branch_office add primary key (branch_number);
 Alter table staff add foreign key (branch_number) references branch_office(branch_number);
