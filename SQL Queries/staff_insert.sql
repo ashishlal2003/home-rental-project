@@ -1,18 +1,6 @@
 use home_rental;
 
-INSERT INTO staff VALUES
-('SG1', 'John Doe', 'M', '1985-01-01', 'Manager', 50000.00, 'B001', '123 Main St, London', 1234567890, NULL, '2022-01-01', 2500.00),
-('SG2', 'Jane Smith', 'F', '1990-05-12', 'Supervisor', 35000.00, 'B001', '123 Main St, London', 1234567890, 'John Doe', '2022-01-01', 1500.00),
-('SG3', 'Mark Johnson', 'M', '1988-11-15', 'Assistant', 25000.00, 'B001', '123 Main St, London', 1234567890, 'Jane Smith', NULL, NULL),
-('SG4', 'Emily Brown', 'F', '1995-04-21', 'Assistant', 25000.00, 'B001', '123 Main St, London', 1234567890, 'Jane Smith', NULL, NULL),
-('SG5', 'Susan Brand', 'F', '1940-06-03', 'Manager', 24000.00, 'B003', '163 Main St, Glasgow', 1413392178, NULL, '1990-06-01', 2350.00),
-('SG6', 'David Lee', 'M', '1991-09-27', 'Supervisor', 30000.00, 'B003', '163 Main St, Glasgow', 1413392178, 'Susan Brand', '2022-01-01', 1000.00),
-('SG7', 'Karen Taylor', 'F', '1994-12-30', 'Assistant', 20000.00, 'B003', '163 Main St, Glasgow', 1413392178, 'David Lee', NULL, NULL),
-('SG8', 'Peter Davis', 'M', '1996-07-14', 'Assistant', 20000.00, 'B003', '163 Main St, Glasgow', 1413392178, 'David Lee', NULL, NULL),
-('SG9', 'William Adams', 'M', '1993-03-08', 'Supervisor', 32000.00, 'B002', '456 High St, Manchester', 1612345678, 'Michael Brown', '2022-01-01', 1200.00),
-('SG10', 'Sarah Miller', 'F', '1997-02-18', 'Assistant', 21000.00, 'B002', '456 High St, Manchester', 1612345678, 'William Adams', NULL, NULL);
 
-select * from staff;
 
 INSERT INTO prop_registration (p_no, type, rooms, rent, address, own_no, name, per_address, tel_no, business_type, cont_no, staff_manage, branch) VALUES
 ('PG16', 'Flat', 4, 450, '5 Nover Drive, Glasglow, G12 9AX', 'C093', 'Tony Shaw', '12 Park PI, Glasgow G4 OQR', 01412257025, NULL, NULL, 'David Ford', '163 Main St., Glasgow'),
@@ -40,16 +28,33 @@ INSERT INTO prop_registration (p_no, type, rooms, rent, address, own_no, name, p
 (900, 'Cash', 'N', '2022-11-01', '2023-10-31', '1 year'),
 (950, 'Credit Card', 'Y', '2022-12-01', '2023-05-31', '6 months');
 
+select * from payment_details;
+
  
 INSERT INTO branch_office (branch_number, branch_address, telephone_number) VALUES
-('B003', '163 Main St, Glasgow', 01412257025),
-('B005', '10 Princes St, Edinburgh', 01314788585),
-('B012', '21 Union St, Aberdeen', 01224632683),
-('B019', '12 High St, Inverness', 01463235477),
-('B025', '22 Castle St, Stirling', 01786476546),
-('B034', '5 King St, Perth', 01738476835),
-('B041', '8 Regent St, Dundee', 01382678934),
-('B048', '29 Hope St, Glasgow', 01412054065),
-('B055', '16 Hanover St, Edinburgh', 01316687692),
-('B063', '7 Albyn Pl, Aberdeen', 01224367587);
+('B001', '163 Main St, Glasgow', 01412257025),
+('B002', '10 Princes St, Edinburgh', 01314788585),
+('B003', '21 Union St, Aberdeen', 01224632683),
+('B004', '12 High St, Inverness', 01463235477),
+('B005', '22 Castle St, Stirling', 01786476546),
+('B006', '5 King St, Perth', 01738476835),
+('B007', '8 Regent St, Dundee', 01382678934),
+('B008', '29 Hope St, Glasgow', 01412054065),
+('B009', '16 Hanover St, Edinburgh', 01316687692),
+('B010', '7 Albyn Pl, Aberdeen', 01224367587);
+
+select * from branch_office;
+
+INSERT INTO staff VALUES ('SG1', 'John Smith', 'M', '1985-05-20', 'Manager', 75000.00, 'B001', '123 Main St', '555-1234', 'Jane Doe', '2020-01-01', 5000.00);
+INSERT INTO staff VALUES ('SG2', 'Jane Doe', 'F', '1990-08-15', 'Supervisor', 60000.00, 'B002', '456 Maple Ave', '555-5678', 'Jim Johnson', '2021-02-01', 3000.00);
+INSERT INTO staff VALUES ('SG3', 'Robert Garcia', 'M', '1982-12-10', 'Assistant', 45000.00, 'B003', '789 Oak St', '555-9012', 'John Smith', '2022-01-01', NULL);
+INSERT INTO staff VALUES ('SG4', 'Karen Lee', 'F', '1988-02-18', 'Manager', 80000.00, 'B004', '111 Elm St', '555-3456', 'Robert Garcia', '2020-07-01', 7000.00);
+INSERT INTO staff VALUES ('SG5', 'David Kim', 'M', '1995-11-02', 'Supervisor', 55000.00, 'B005', '222 Pine St', '555-7890', 'Karen Lee', '2021-06-01', 2500.00);
+INSERT INTO staff VALUES ('SG6', 'Samantha Brown', 'F', '1992-04-25', 'Assistant', 40000.00, 'B006', '333 Cedar Ave', '555-1234', 'David Kim', '2022-03-01', NULL);
+INSERT INTO staff VALUES ('SG7', 'Andrew Lee', 'M', '1986-09-12', 'Manager', 85000.00, 'B007', '444 Birch St', '555-5678', 'Samantha Brown', '2020-01-01', 8000.00);
+INSERT INTO staff VALUES ('SG8', 'Lisa Chen', 'F', '1993-06-22', 'Supervisor', 62000.00, 'B008', '555 Oak St', '555-9012', 'Andrew Lee', '2021-04-01', 3500.00);
+INSERT INTO staff VALUES ('SG9', 'Michael Davis', 'M', '1989-03-07', 'Assistant', 47000.00, 'B009', '666 Maple Ave', '555-3456', 'Lisa Chen', '2022-01-01', NULL);
+INSERT INTO staff VALUES ('SG10', 'Jessica Nguyen', 'F', '1996-12-31', 'Manager', 90000.00, 'B010', '777 Elm St', '555-7890', 'Michael Davis', '2020-10-01', 10000.00);
+
+select * from staff;
 

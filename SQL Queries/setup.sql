@@ -9,12 +9,15 @@ position varchar(100),
 salary decimal(10,2),
 branch_number varchar(100),
 branch_address varchar(100),
-telephone_number int,
+telephone_number varchar(15),
 supervisor_name varchar(100),
 manager_start_date date,
 manager_bonus decimal(10,2));
 
 Alter table staff add primary key(staff_number);
+
+
+
 CREATE INDEX idx_branch_number ON staff(branch_number);
 
 
@@ -26,9 +29,9 @@ address varchar(100),
 own_no varchar(100),
 name varchar(100),
 per_address varchar(100),
-tel_no int,
+tel_no varchar(15),
 business_type varchar(100),
-cont_no int,
+cont_no varchar(15),
 staff_manage varchar(100),
 branch varchar(100));
 
@@ -45,10 +48,11 @@ duration varchar(100));
 
 create table branch_office(branch_number varchar(100),
 branch_address varchar(100),
-telephone_number int);
+telephone_number varchar(15));
 
 Alter table branch_office add primary key (branch_number);
-Alter table branch_office add foreign key (branch_number) references staff(branch_number);
+Alter table staff add foreign key (branch_number) references branch_office(branch_number);
+
 
 create table property(property_no  varchar(100),
 property_type  varchar(100),
