@@ -31,17 +31,18 @@ INSERT INTO prop_registration (p_no, type, rooms, rent, address, own_no, name, p
 select * from payment_details;
 
  
-INSERT INTO branch_office (branch_number, branch_address, telephone_number) VALUES
-('B001', '163 Main St, Glasgow', 01412257025),
-('B002', '10 Princes St, Edinburgh', 01314788585),
-('B003', '21 Union St, Aberdeen', 01224632683),
-('B004', '12 High St, Inverness', 01463235477),
-('B005', '22 Castle St, Stirling', 01786476546),
-('B006', '5 King St, Perth', 01738476835),
-('B007', '8 Regent St, Dundee', 01382678934),
-('B008', '29 Hope St, Glasgow', 01412054065),
-('B009', '16 Hanover St, Edinburgh', 01316687692),
-('B010', '7 Albyn Pl, Aberdeen', 01224367587);
+INSERT INTO branch_office (branch_number, branch_address, telephone_number) VALUES 
+('B001', '55 Princes St, Edinburgh EH2 2HL', '01312265876/01312267489'),
+('B002', '34 Union St, Aberdeen AB11 5BN', '01224565543/01224561278'),
+('B003', '163 Main St, Glasgow G11 9QX', '01413392178/01413394439'),
+('B004', '23 High St, Inverness IV1 1JY', '01463278451/01463273691'),
+('B005', '83 King St, Dundee DD1 2ER', '01382637246/01382638945'),
+('B006', '5 Bridge St, Perth PH1 5LA', '01738674328/01738678901'),
+('B007', '12 George St, Stirling FK8 2BJ', '01786431245/01786436589'),
+('B008', '4 Queen St, Ayr KA7 1EH', '01292456897/01292451236'),
+('B009', '15 Chapel St, Paisley PA1 1ER', '01418876123/01418871234'),
+('B010', '27 Castle St, Elgin IV30 1BN', '01343567890/01343564321');
+
 
 select * from branch_office;
 
@@ -57,4 +58,18 @@ INSERT INTO staff VALUES ('SG9', 'Michael Davis', 'M', '1989-03-07', 'Assistant'
 INSERT INTO staff VALUES ('SG10', 'Jessica Nguyen', 'F', '1996-12-31', 'Manager', 90000.00, 'B010', '777 Elm St', '555-7890', 'Michael Davis', '2020-10-01', 10000.00);
 
 select * from staff;
+
+
+INSERT INTO staff (staff_number, full_name, sex, DOB, position, salary, branch_number, branch_address, telephone_number, supervisor_name, manager_start_date, manager_bonus) VALUES 
+('S001', 'John Smith', 'M', '1990-05-15', 'Manager', 65000.00, 'B001', '10 High St., Glasgow G1 1NL', '01413218972', NULL, NULL, NULL),
+('S002', 'Alice Johnson', 'F', '1995-02-28', 'Assistant Manager', 45000.00, 'B001', '10 High St., Glasgow G1 1NL', '01413218972', 'John Smith', '2020-01-01', 5000.00),
+('S003', 'David Lee', 'M', '1992-09-01', 'Sales Representative', 35000.00, 'B001', '10 High St., Glasgow G1 1NL', '01413218972', 'Alice Johnson', NULL, NULL),
+('S004', 'Jennifer Green', 'F', '1998-11-20', 'Sales Representative', 32000.00, 'B002', '5 Argyle St., Edinburgh EH1 1AA', '01314456823', 'Sarah Brown', NULL, NULL),
+('S005', 'Michael Chen', 'M', '1991-06-10', 'Customer Service Representative', 30000.00, 'B002', '5 Argyle St., Edinburgh EH1 1AA', '01314456823', 'Jennifer Green', NULL, NULL),
+('S006', 'Julie Baker', 'F', '1994-12-07', 'Customer Service Representative', 29000.00, 'B002', '5 Argyle St., Edinburgh EH1 1AA', '01314456823', 'Michael Chen', NULL, NULL),
+('S007', 'Mark Johnson', 'M', '1993-03-17', 'Manager', 70000.00, 'B003', '163 Main St, Glasgow G11 9QX', '01413392178/01413394439', NULL, NULL, NULL),
+('S008', 'Mary Smith', 'F', '1997-08-26', 'Assistant Manager', 50000.00, 'B003', '163 Main St, Glasgow G11 9QX', '01413392178/01413394439', 'Mark Johnson', '2021-01-01', 8000.00),
+('S009', 'Thomas Lee', 'M', '1995-05-06', 'Sales Representative', 40000.00, 'B003', '163 Main St, Glasgow G11 9QX', '01413392178/01413394439', 'Mary Smith', NULL, NULL),
+('S010', 'Emma Davis', 'F', '1999-12-16', 'Customer Service Representative', 32000.00, 'B003', '163 Main St, Glasgow G11 9QX', '01413392178/01413394439', 'Thomas Lee', NULL, NULL);
+
 
