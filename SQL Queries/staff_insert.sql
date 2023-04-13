@@ -24,7 +24,7 @@ INSERT INTO prop_registration (p_no, type, rooms, rent, address, own_no, name, p
 ('BT35', 'Apartment', 2, 550, '9 Buchanan St., Paisley, PA1 2QT', 'A091', 'Oliver Clark', '6 Abbey Rd., Paisley PA2 6NB', 01418892220, NULL, NULL, 'Karen Black', '57 Princes St., Edinburgh'),
 ('SP56', 'Flat', 3, 400, '17 Springfield Rd., Perth, PH1 5RY', 'C123', 'Alex Turner', '20 Dunkeld Rd., Perth PH1 5RW', 01738637251, NULL, NULL, 'John Doe', '83 King St., Dundee'),
 ('AB45', 'House', 4, 650, '13 Abbey Rd., Ayr, KA7 2SZ', 'D173', 'Sophie Wilson', '11 Craigie Rd., Ayr KA8 0QJ', 01292483528, 'Supermarket', 07578461329, 'Emily Jones', '23 Union St., Aberdeen'),
-('EL21', 'Flat', 2, 350, '7 Elm St., Elgin, IV30 1NY', 'B129', 'Adam Brown', '
+('GL22', 'House', 4, 600, '23-25 Union St, Glasgow G1 3RB', 'U091', 'Ursula Smith', '27-29 Bath St, Glasgow G2 1HW', 01412861050, 'Marketing', 07385394658, 'Tom Baker', '46 Queen St, Glasgow');
 
  select * from prop_registration;
  
