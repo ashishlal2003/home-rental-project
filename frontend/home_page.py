@@ -6,32 +6,32 @@ root.geometry('500x270')
 label_head=Label(root, text="HOME", fg="Dark Blue", font=("Arial", 12)).place(x=213, y=0)
 
 def redirect_client_registration():
-    root.destroy()
+    # root.destroy()
     import client_registration
 
 
 def redirect_property_registration():
-    root.destroy()
+    # root.destroy()
     import property_registration
 
 
 def redirect_view_listed_properties():
-    root.destroy()
+    # root.destroy()
     import view_listed_properties
 
 
 def redirect_provide_comments():
-    root.destroy()
+    # root.destroy()
     import provide_comments
 
 
 def redirect_staff_onboarding():
-    root.destroy()
+    # root.destroy()
     import staff_onboarding
 
 
 def redirect_lease_form():
-    root.destroy()
+    # root.destroy()
     import lease_form
 
 
