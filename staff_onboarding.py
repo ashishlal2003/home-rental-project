@@ -5,7 +5,35 @@ root = Tk()
 root.title("Staff Onboarding")
 root.geometry('635x700')
 
+import mysql.connector
+mydb = mysql.connector.Connect(
+    host='localhost',
+    user='root',
+    password='ashishlal',
+    database='home_rental'
+)
+
+myc = mydb.cursor()
+
 def func_root():
+    staff_number = staff_number_entry.get()
+    full_name = full_name_entry.get()
+    sex = sex_entry.get()
+    dob = dob_entry.get()
+    position = position_entry.get()
+    salary = salary_entry.get()
+    branch_number = branch_number_entry.get()
+    branch_address = branch_address_entry.get()
+    telephone_number_staff = telephone_number_entry.get()
+    supervisor_name = supervisor_name_entry.get()
+    manager_start = manager_start_entry.get()
+    manager_bonus = manager_bonus_entry.get()
+    sql = "INSERT INTO staff VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    
+    val = (staff_number, full_name, sex, dob, position, salary, branch_number, branch_address, telephone_number_staff, supervisor_name, manager_start, manager_bonus)
+    myc.execute(sql,val)
+    mydb.commit()
+
     root.destroy()
     os.system("python main.py")
     
@@ -24,18 +52,42 @@ supervisor_name_label=Label(root, text="Supervisor Name").place(x=50, y=490)
 manager_start_date_label=Label(root, text="Manager Start Date").place(x=50, y=530)
 manager_bonus_label=Label(root, text="Manager Bonus").place(x=50, y=570)
 
-staff_number_entry=Entry(root, width=60).place(x=190, y=52)
-full_name_entry=Entry(root, width=60).place(x=190, y=92)
-sex_entry=Entry(root, width=60).place(x=190, y=132)
-dob_entry=Entry(root, width=60).place(x=190, y=172)
-position_entry=Entry(root, width=60).place(x=190, y=222)
-salary_entry=Entry(root, width=60).place(x=190, y=262)
-branch_number_entry=Entry(root, width=60).place(x=190, y=312)
-branch_address_entry=Entry(root, width=60).place(x=190, y=352)
-telephone_number_entry=Entry(root, width=60).place(x=190, y=392)
-supervisor_name_entry=Entry(root, width=60).place(x=190, y=492)
-manager_start_entry=Entry(root, width=60).place(x=190, y=532)
-manager_bonus_entry=Entry(root, width=60).place(x=190, y=572)
+staff_number_entry = Entry(root, width=60)
+staff_number_entry.place(x=190, y=52)
+
+full_name_entry = Entry(root, width=60)
+full_name_entry.place(x=190, y=92)
+
+sex_entry = Entry(root, width=60)
+sex_entry.place(x=190, y=132)
+
+dob_entry = Entry(root, width=60)
+dob_entry.place(x=190, y=172)
+
+position_entry = Entry(root, width=60)
+position_entry.place(x=190, y=222)
+
+salary_entry = Entry(root, width=60)
+salary_entry.place(x=190, y=262)
+
+branch_number_entry = Entry(root, width=60)
+branch_number_entry.place(x=190, y=312)
+
+branch_address_entry = Entry(root, width=60)
+branch_address_entry.place(x=190, y=352)
+
+telephone_number_entry = Entry(root, width=60)
+telephone_number_entry.place(x=190, y=392)
+
+supervisor_name_entry = Entry(root, width=60)
+supervisor_name_entry.place(x=190, y=492)
+
+manager_start_entry = Entry(root, width=60)
+manager_start_entry.place(x=190, y=532)
+
+manager_bonus_entry = Entry(root, width=60)
+manager_bonus_entry.place(x=190, y=572)
+
 
 submit_but=Button(root, text="Submit", width=10, bg="purple", fg="white", command=func_root).place(x=50, y=620)
 

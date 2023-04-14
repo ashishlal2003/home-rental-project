@@ -40,12 +40,8 @@ city varchar(100));
 Alter table prop_registration add primary key (p_no);
 Alter table prop_registration add foreign key (staff_manage) references staff(full_name);
 
-create table payment_details(monthly_rent int,
-payment_method varchar(100),
-deposit_paid char(1),
-rent_start date,
-rent_finish date,
-duration varchar(100));
+create table payment_details(,
+);
 
 
 
@@ -80,8 +76,15 @@ Alter table comments add foreign key (client_no) references client_registration(
 
 create table lease_table(client_number varchar(100),
 full_name varchar(100),
+monthly_rent int,
+payment_method varchar(100),
+deposit_paid char(1),
 property_number varchar(100),
-property_address varchar(100));
+property_address varchar(100),
+rent_start date,
+rent_finish date,
+duration varchar(100)
+);
 
 Alter table lease_table add primary key (property_number);
 Alter table lease_table add foreign key (client_number) references client_registration(client_no);
