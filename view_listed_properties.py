@@ -5,7 +5,7 @@ import os
 
 def func_view_property():
     root.destroy()
-    os.system("python frontend\main.py")
+    os.system("python main.py")
 
 root = Tk()
 root.title("View Listed Properties")

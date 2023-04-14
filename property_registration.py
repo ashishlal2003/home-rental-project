@@ -6,7 +6,7 @@ root.geometry('630x750')
 
 def func_root():
     root.destroy()
-    os.system("python frontend\main.py")
+    os.system("python main.py")
 
 property_number_label=Label(root, text="Property Number").place(x=50, y=50)
 type_label=Label(root, text="Type").place(x=50, y=90)

@@ -7,7 +7,7 @@ root.geometry('600x630')
 
 def func_root():
     root.destroy()
-    os.system("python frontend\main.py")
+    os.system("python main.py")
 
 client_number_label=Label(root, text="Client Number (enter if known)").place(x=50, y=50)
 full_name_label=Label(root, text="Full Name (proot print)").place(x=50, y=90)

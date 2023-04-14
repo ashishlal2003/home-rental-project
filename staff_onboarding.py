@@ -7,7 +7,7 @@ root.geometry('635x700')
 
 def func_root():
     root.destroy()
-    os.system("python frontend\main.py")
+    os.system("python main.py")
     
 
 staff_number_label=Label(root, text="Staff Number").place(x=50, y=50)
