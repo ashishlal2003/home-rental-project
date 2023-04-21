@@ -40,10 +40,6 @@ city varchar(100));
 Alter table prop_registration add primary key (p_no);
 Alter table prop_registration add foreign key (staff_manage) references staff(full_name);
 
-create table payment_details(,
-);
-
-
 
 create table branch_office(branch_number varchar(4),
 branch_address varchar(100),
