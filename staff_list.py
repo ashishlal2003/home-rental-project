@@ -23,7 +23,7 @@ def populate_table():
     myc = mydb.cursor()
     branch_no = branch_no_entry.get()
 
-    sql = "SELECT p_no, Type, Rooms, Rent,Address, Name FROM prop_registration WHERE branch_no = %s"
+    sql = "SELECT * WHERE branch_no = %s"
     val = (branch_no,)
     myc.execute(sql, val)
     result = myc.fetchall()
