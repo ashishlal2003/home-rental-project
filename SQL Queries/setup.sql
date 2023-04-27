@@ -32,9 +32,8 @@ name varchar(100),
 per_address varchar(100),
 tel_no varchar(15),
 business_type varchar(100),
-cont_no varchar(15),
 staff_manage varchar(100),
-branch varchar(100),
+branch_no varchar(100),
 city varchar(100));
 
 Alter table prop_registration add primary key (p_no);
