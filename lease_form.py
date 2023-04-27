@@ -27,13 +27,13 @@ def func_root():
     payment_method = payment_method_entry.get()
     deposit_paid = deposit_paid_entry.get()
     property_number = property_number_entry.get()
-    property_address = property_address_entry.get()
+    # property_address = property_address_entry.get()
     rent_start = rent_start_entry.get()
     rent_finish = rent_finish_entry.get()
     duration = duration_entry.get()
 
-    sql = "INSERT INTO lease_table VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
-    val = (client_number,full_name,monthly_rent,payment_method,deposit_paid,property_number,property_address,rent_start,rent_finish,duration)
+    sql = "INSERT INTO lease_table VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    val = (client_number,full_name,monthly_rent,payment_method,deposit_paid,property_number,rent_start,rent_finish,duration)
 
     myc.execute(sql, val)
     mydb.commit()
@@ -78,6 +78,8 @@ property_number_entry.place(x=575, y=82)
 
 property_address_entry = Entry(root, width=30)
 property_address_entry.place(x=575, y=122)
+# property_address_entry = Entry(root, width=50)
+# property_address_entry.place(x=235, y=362)
 
 rent_start_entry = Entry(root, width=30)
 rent_start_entry.place(x=575, y=232)

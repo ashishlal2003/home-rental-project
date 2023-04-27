@@ -8,17 +8,17 @@ INSERT INTO branch_office (branch_number, branch_address, telephone_number,city)
 
 select * from branch_office;
 
-INSERT INTO staff (staff_number, full_name, sex, DOB, position, salary, branch_number, branch_address, telephone_number, supervisor_name, manager_start_date, manager_bonus) VALUES 
-('S001', 'John Smith', 'M', '1990-05-15', 'Manager', 65000.00, 'B001', '10 High St., Glasgow G1 1NL', '01413218972', NULL, NULL, NULL),
-('S002', 'Alice Johnson', 'F', '1995-02-28', 'Assistant Manager', 45000.00, 'B001', '10 High St., Glasgow G1 1NL', '01413218972', 'John Smith', '2020-01-01', 5000.00),
-('S003', 'David Lee', 'M', '1992-09-01', 'Sales Representative', 35000.00, 'B001', '10 High St., Glasgow G1 1NL', '01413218972', 'Alice Johnson', NULL, NULL),
-('S004', 'Jennifer Green', 'F', '1998-11-20', 'Sales Representative', 32000.00, 'B002', '5 Argyle St., Edinburgh EH1 1AA', '01314456823', 'Sarah Brown', NULL, NULL),
-('S005', 'Michael Chen', 'M', '1991-06-10', 'Customer Service Representative', 30000.00, 'B002', '5 Argyle St., Edinburgh EH1 1AA', '01314456823', 'Jennifer Green', NULL, NULL),
-('S006', 'Julie Baker', 'F', '1994-12-07', 'Customer Service Representative', 29000.00, 'B002', '5 Argyle St., Edinburgh EH1 1AA', '01314456823', 'Michael Chen', NULL, NULL),
-('S007', 'Mark Johnson', 'M', '1993-03-17', 'Manager', 70000.00, 'B003', '163 Main St, Glasgow G11 9QX', '01413392178/01413394439', NULL, NULL, NULL),
-('S008', 'Mary Smith', 'F', '1997-08-26', 'Assistant Manager', 50000.00, 'B003', '163 Main St, Glasgow G11 9QX', '01413392178/01413394439', 'Mark Johnson', '2021-01-01', 8000.00),
-('S009', 'Thomas Lee', 'M', '1995-05-06', 'Sales Representative', 40000.00, 'B003', '163 Main St, Glasgow G11 9QX', '01413392178/01413394439', 'Mary Smith', NULL, NULL),
-('S010', 'Emma Davis', 'F', '1999-12-16', 'Customer Service Representative', 32000.00, 'B003', '163 Main St, Glasgow G11 9QX', '01413392178/01413394439', 'Thomas Lee', NULL, NULL);
+INSERT INTO staff (staff_number, full_name, sex, DOB, position, salary, branch_number, supervisor_name, manager_start_date, manager_bonus) VALUES 
+('S001', 'John Smith', 'M', '1990-05-15', 'Manager', 65000.00, 'B001', NULL, NULL, NULL),
+('S002', 'Alice Johnson', 'F', '1995-02-28', 'Assistant Manager', 45000.00, 'B001', 'John Smith', '2020-01-01', 5000.00),
+('S003', 'David Lee', 'M', '1992-09-01', 'Sales Representative', 35000.00, 'B001', 'Alice Johnson', NULL, NULL),
+('S004', 'Jennifer Green', 'F', '1998-11-20', 'Sales Representative', 32000.00, 'B002', 'Sarah Brown', NULL, NULL),
+('S005', 'Michael Chen', 'M', '1991-06-10', 'Customer Service Representative', 30000.00, 'B002', 'Jennifer Green', NULL, NULL),
+('S006', 'Julie Baker', 'F', '1994-12-07', 'Customer Service Representative', 29000.00, 'B002', 'Michael Chen', NULL, NULL),
+('S007', 'Mark Johnson', 'M', '1993-03-17', 'Manager', 70000.00, 'B003', NULL, NULL, NULL),
+('S008', 'Mary Smith', 'F', '1997-08-26', 'Assistant Manager', 50000.00, 'B003', 'Mark Johnson', '2021-01-01', 8000.00),
+('S009', 'Thomas Lee', 'M', '1995-05-06', 'Sales Representative', 40000.00, 'B003',  'Mary Smith', NULL, NULL),
+('S010', 'Emma Davis', 'F', '1999-12-16', 'Customer Service Representative', 32000.00, 'B003', 'Thomas Lee', NULL, NULL);
 
 select * from staff;
 

@@ -29,14 +29,14 @@ def func_root():
     position = position_entry.get()
     salary = salary_entry.get()
     branch_number = branch_number_entry.get()
-    branch_address = branch_address_entry.get()
-    telephone_number_staff = telephone_number_entry.get()
+    # branch_address = branch_address_entry.get()
+    # telephone_number_staff = telephone_number_entry.get()
     supervisor_name = supervisor_name_entry.get()
     manager_start = manager_start_entry.get()
     manager_bonus = manager_bonus_entry.get()
-    sql = "INSERT INTO staff VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    sql = "INSERT INTO staff VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     
-    val = (staff_number, full_name, sex, dob, position, salary, branch_number, branch_address, telephone_number_staff, supervisor_name, manager_start, manager_bonus)
+    val = (staff_number, full_name, sex, dob, position, salary, branch_number, supervisor_name, manager_start, manager_bonus)
     myc.execute(sql,val)
     mydb.commit()
 
@@ -56,8 +56,8 @@ salary_label=Label(root, text="salary", bg="#DAF5FF", fg="#394867",font=("Arial"
 
 enter_details_label=Label(root, text="Enter details where applicable",bg="#DAF5FF", fg="#394867",font=("Arial", 14)).place(x=40, y=320)
 supervisor_name_label=Label(root, text="Supervisor Name", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=40, y=365)
-manager_start_date_label=Label(root, text="Manager Start Date", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=430, y=325)
-manager_bonus_label=Label(root, text="Manager Bonus", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=430, y=365)
+manager_start_date_label=Label(root, text="Start Date", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=485, y=325)
+manager_bonus_label=Label(root, text="Bonus", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=508, y=365)
 
 branch_number_label=Label(root, text="Branch Number", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=430, y=80)
 branch_address_label=Label(root, text="Branch Address", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=430, y=120)
@@ -80,6 +80,11 @@ position_entry.place(x=160, y=222)
 
 salary_entry = Entry(root, width=30)
 salary_entry.place(x=160, y=262)
+# branch_address_entry = Entry(root, width=60)
+# branch_address_entry.place(x=190, y=352)
+
+# telephone_number_entry = Entry(root, width=60)
+# telephone_number_entry.place(x=190, y=392)
 
 branch_number_entry = Entry(root, width=30)
 branch_number_entry.place(x=595, y=82)
