@@ -9,11 +9,16 @@ import mysql.connector
 mydb = mysql.connector.Connect(
     host='localhost',
     user='root',
-    password='ashishlal',
+    password='asusrog',
     database='home_rental'
 )
 
 myc = mydb.cursor()
+
+def back():
+    root.destroy()
+    os.system("python main.py")
+
 
 def func_root():
     staff_number = staff_number_entry.get()
@@ -90,5 +95,6 @@ manager_bonus_entry.place(x=190, y=572)
 
 
 submit_but=Button(root, text="Submit", width=10, bg="purple", fg="white", command=func_root).place(x=50, y=620)
+back=Button(root, text="Back", width=10, bg="grey", fg="white", command=back).place(x=475, y=620)
 
 root.mainloop()

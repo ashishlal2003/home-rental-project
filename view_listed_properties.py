@@ -6,11 +6,17 @@ import mysql.connector
 mydb = mysql.connector.Connect(
     host='localhost',
     user='root',
-    password='ashishlal',
+    password='asusrog',
     database='home_rental'
 )
 
 # def func_view_property():
+
+def back():
+    root.destroy()
+    os.system("python main.py")
+
+
 def populate_table():
     myc = mydb.cursor()
     branch_no = branch_no_entry.get()
@@ -69,5 +75,6 @@ table.config(xscrollcommand=xscrollbar.set)
 
 submit_but = Button(root, text="Submit", width=10, bg="purple", fg="white", command=populate_table)
 submit_but.place(x=50, y=140)
+back=Button(root, text="Back", width=10, bg="grey", fg="white", command=back).place(x=500, y=450)
 
 root.mainloop()
