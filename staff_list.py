@@ -23,7 +23,7 @@ def populate_table():
     myc = mydb.cursor()
     branch_no = branch_no_entry.get()
 
-    sql = "SELECT * WHERE branch_no = %s"
+    sql = "SELECT * FROM STAFF WHERE branch_number = %s"
     val = (branch_no,)
     myc.execute(sql, val)
     result = myc.fetchall()
@@ -48,7 +48,7 @@ table.heading('Position', text='Position')
 
 table.place(x=45, y=200)
 
-submit_but = Button(root, text="Submit", width=10, bg="#3E54AC", fg="white",font=("Arial", 12))
+submit_but = Button(root, text="Submit", width=10, bg="#3E54AC", fg="white",font=("Arial", 12), command=populate_table)
 submit_but.place(x=47, y=130)
 back=Button(root, text="Back", width=10, bg="#595260", fg="white",font=("Arial", 12), command=back).place(x=305, y=450)
 
