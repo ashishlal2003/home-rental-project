@@ -9,7 +9,7 @@ import mysql.connector
 mydb = mysql.connector.Connect(
     host='localhost',
     user='root',
-    password='asusrog',
+    password='ashishlal',
     database='home_rental'
 )
 
@@ -28,14 +28,14 @@ def func_root():
     position = position_entry.get()
     salary = salary_entry.get()
     branch_number = branch_number_entry.get()
-    branch_address = branch_address_entry.get()
-    telephone_number_staff = telephone_number_entry.get()
+    # branch_address = branch_address_entry.get()
+    # telephone_number_staff = telephone_number_entry.get()
     supervisor_name = supervisor_name_entry.get()
     manager_start = manager_start_entry.get()
     manager_bonus = manager_bonus_entry.get()
-    sql = "INSERT INTO staff VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    sql = "INSERT INTO staff VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     
-    val = (staff_number, full_name, sex, dob, position, salary, branch_number, branch_address, telephone_number_staff, supervisor_name, manager_start, manager_bonus)
+    val = (staff_number, full_name, sex, dob, position, salary, branch_number, supervisor_name, manager_start, manager_bonus)
     myc.execute(sql,val)
     mydb.commit()
 
@@ -50,12 +50,12 @@ dob_label=Label(root, text="DOB").place(x=50, y=170)
 position_label=Label(root, text="Position").place(x=50, y=220)
 salary_label=Label(root, text="salary").place(x=50, y=260)
 branch_number_label=Label(root, text="Branch Number").place(x=50, y=310)
-branch_address_label=Label(root, text="Branch Address").place(x=50, y=350)
-telephone_number_label=Label(root, text="Telephone Number(s)").place(x=50, y=390)
+# branch_address_label=Label(root, text="Branch Address").place(x=50, y=350)
+# telephone_number_label=Label(root, text="Telephone Number(s)").place(x=50, y=390)
 enter_details_label=Label(root, text="Enter details where applicable",font=("Arial", 11)).place(x=50, y=440)
 supervisor_name_label=Label(root, text="Supervisor Name").place(x=50, y=490)
-manager_start_date_label=Label(root, text="Manager Start Date").place(x=50, y=530)
-manager_bonus_label=Label(root, text="Manager Bonus").place(x=50, y=570)
+manager_start_date_label=Label(root, text="Start Date").place(x=50, y=530)
+manager_bonus_label=Label(root, text="Bonus").place(x=50, y=570)
 
 staff_number_entry = Entry(root, width=60)
 staff_number_entry.place(x=190, y=52)
@@ -78,11 +78,11 @@ salary_entry.place(x=190, y=262)
 branch_number_entry = Entry(root, width=60)
 branch_number_entry.place(x=190, y=312)
 
-branch_address_entry = Entry(root, width=60)
-branch_address_entry.place(x=190, y=352)
+# branch_address_entry = Entry(root, width=60)
+# branch_address_entry.place(x=190, y=352)
 
-telephone_number_entry = Entry(root, width=60)
-telephone_number_entry.place(x=190, y=392)
+# telephone_number_entry = Entry(root, width=60)
+# telephone_number_entry.place(x=190, y=392)
 
 supervisor_name_entry = Entry(root, width=60)
 supervisor_name_entry.place(x=190, y=492)

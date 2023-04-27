@@ -5,7 +5,7 @@ import mysql.connector
 mydb = mysql.connector.Connect(
     host='localhost',
     user='root',
-    password='asusrog',
+    password='ashishlal',
     database='home_rental'
 )
 
@@ -26,13 +26,13 @@ def func_root():
     payment_method = payment_method_entry.get()
     deposit_paid = deposit_paid_entry.get()
     property_number = property_number_entry.get()
-    property_address = property_address_entry.get()
+    # property_address = property_address_entry.get()
     rent_start = rent_start_entry.get()
     rent_finish = rent_finish_entry.get()
     duration = duration_entry.get()
 
-    sql = "INSERT INTO lease_table VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
-    val = (client_number,full_name,monthly_rent,payment_method,deposit_paid,property_number,property_address,rent_start,rent_finish,duration)
+    sql = "INSERT INTO lease_table VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    val = (client_number,full_name,monthly_rent,payment_method,deposit_paid,property_number,rent_start,rent_finish,duration)
 
     myc.execute(sql, val)
     mydb.commit()
@@ -47,7 +47,7 @@ monthly_rent_label=Label(root, text="Monthly Rent").place(x=50, y=190)
 payment_method_label=Label(root, text="Payment Method").place(x=50, y=230)
 deposit_paid_label=Label(root, text="Deposit Paid (Y or N)").place(x=50, y=270)
 property_number_label=Label(root, text="Property Number").place(x=50, y=320)
-property_address_label=Label(root, text="Property Address").place(x=50, y=360)
+# property_address_label=Label(root, text="Property Address").place(x=50, y=360)
 rent_start_label=Label(root, text="Rent Start").place(x=50, y=410)
 rent_finish_label=Label(root, text="Rent Finish").place(x=50, y=450)
 duration_label=Label(root, text="Duration").place(x=50, y=490)
@@ -70,8 +70,8 @@ deposit_paid_entry.place(x=235, y=272)
 property_number_entry = Entry(root, width=50)
 property_number_entry.place(x=235, y=322)
 
-property_address_entry = Entry(root, width=50)
-property_address_entry.place(x=235, y=362)
+# property_address_entry = Entry(root, width=50)
+# property_address_entry.place(x=235, y=362)
 
 rent_start_entry = Entry(root, width=20)
 rent_start_entry.place(x=235, y=412)
