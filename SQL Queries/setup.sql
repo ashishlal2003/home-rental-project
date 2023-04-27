@@ -49,7 +49,7 @@ city varchar(100));
 
 Alter table prop_registration add primary key (p_no);
 Alter table prop_registration add foreign key (staff_manage) references staff(full_name);
-Alter table prop_registration add foreign key (own_no) references client_registration(client_no);
+-- Alter table prop_registration add foreign key (own_no) references client_registration(client_no);
 
 
 create table branch_office(branch_number varchar(4) UNIQUE,
