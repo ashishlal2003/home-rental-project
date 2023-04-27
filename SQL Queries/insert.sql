@@ -35,17 +35,3 @@ INSERT INTO prop_registration (p_no, type, rooms, rent, address, own_no, name, p
 ('P010', 'House', 4, 600, '23-25 Union St, Glasgow G1 3RB', 'U091', 'Ursula Smith', '27-29 Bath St, Glasgow G2 1HW', 01412861050, 'Marketing', 'Emma Davis', 'B001','Glasgow');
 
  select * from prop_registration;
- 
---  INSERT INTO payment_details (monthly_rent, payment_method, deposit_paid, rent_start, rent_finish, duration) VALUES 
--- (500, 'Cash', 'N', '2022-04-01', '2022-09-30', '6 months'),
--- (600, 'Credit Card', 'Y', '2022-01-01', '2022-12-31', '1 year'),
--- (550, 'Cheque', 'Y', '2022-05-01', '2022-10-31', '6 months'),
--- (700, 'Bank Transfer', 'N', '2022-06-01', '2022-11-30', '6 months'),
--- (650, 'Cash', 'N', '2022-07-01', '2023-06-30', '1 year'),
--- (750, 'Credit Card', 'Y', '2022-03-01', '2022-08-31', '6 months'),
--- (800, 'Cheque', 'Y', '2022-10-01', '2023-09-30', '1 year'),
--- (850, 'Bank Transfer', 'N', '2022-09-01', '2023-02-28', '6 months'),
--- (900, 'Cash', 'N', '2022-11-01', '2023-10-31', '1 year'),
--- (950, 'Credit Card', 'Y', '2022-12-01', '2023-05-31', '6 months');
-
--- select * from payment_details;

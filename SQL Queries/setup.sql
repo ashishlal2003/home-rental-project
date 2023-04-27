@@ -65,12 +65,13 @@ Alter table staff add foreign key (branch_number) references branch_office(branc
 
 
 create table comments(client_no varchar(100),
+property_number varchar(100),
 name varchar(100),
 date date,
 comments varchar(100));
 
-Alter table comments add primary key (client_no);
 Alter table comments add foreign key (client_no) references client_registration( client_no);
+Alter table comments add foreign key (property_number) references prop_registration( p_no);
 
 
 create table lease_table(client_number varchar(100),
@@ -87,4 +88,3 @@ duration varchar(100)
 
 Alter table lease_table add primary key (property_number);
 Alter table lease_table add foreign key (client_number) references client_registration(client_no);
-Alter table lease_table add foreign key (property_number) references prop_registration(p_no);

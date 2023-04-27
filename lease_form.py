@@ -35,7 +35,12 @@ def func_root():
     sql = "INSERT INTO lease_table VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s)"
     val = (client_number,full_name,monthly_rent,payment_method,deposit_paid,property_number,rent_start,rent_finish,duration)
 
+    sql2 = "DELETE FROM prop_registration WHERE p_no = %s"
+    val2 = (property_number,)
+
     myc.execute(sql, val)
+    mydb.commit()
+    myc.execute(sql2,val2)
     mydb.commit()
 
     root.destroy()

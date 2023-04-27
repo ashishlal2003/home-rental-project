@@ -18,7 +18,7 @@ def populate_table():
     myc = mydb.cursor()
     branch_no = branch_no_entry.get()
 
-    sql = "SELECT client_no,name,type,max_rent,registered_by,date_registered FROM CLIENT_REGISTRATION WHERE branch_no = %s"
+    sql = "SELECT client_no,name,registered_by,date_registered,type,max_rent FROM CLIENT_REGISTRATION WHERE branch_no = %s"
     val = (branch_no,)
     myc.execute(sql, val)
     result = myc.fetchall()
