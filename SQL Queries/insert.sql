@@ -22,30 +22,30 @@ INSERT INTO staff (staff_number, full_name, sex, DOB, position, salary, branch_n
 
 select * from staff;
 
-INSERT INTO prop_registration (p_no, type, rooms, rent, address, own_no, name, per_address, tel_no, business_type, cont_no, staff_manage, branch, city) VALUES
-('PG16', 'Flat', 4, 450, '5 Nover Drive, Glasglow, G12 9AX', 'C093', 'Tony Shaw', '12 Park PI, Glasgow G4 OQR', 01412257025, NULL, NULL, 'John Smith', '163 Main St., Glasgow', 'Glasgow'),
-('KH39', 'House', 5, 700, '8 Fairview St., Edinburgh, EH11 4PB', 'D102', 'Mary Lee', '4 Queens Dr., Edinburgh EH6 5AE', 01315523431, 'Grocery Store', 07725124033, 'Alice Johnson', '57 Princes St., Edinburgh', 'Edinburgh'),
-('BD29', 'Flat', 3, 350, '32 Blythswood St., Dundee, DD1 3JX', 'B105', 'Peter Scott', '1 Victoria St., Dundee DD1 2PU', 01382614201, NULL, NULL, 'David Lee', '83 King St., Dundee', 'Dundee'),
-('LM09', 'Apartment', 2, 500, '11 Lawson St., Aberdeen, AB12 3RT', 'A128', 'Emma Green', '22 Westburn Rd., Aberdeen AB25 2QR', 01224583128, 'Cafe', 07578461329, 'Jennifer Green', '23 Union St., Aberdeen', 'Aberdeen'),
-('CC13', 'Flat', 1, 300, '23 Cameron St., Inverness, IV1 1HG', 'B137', 'Jack White', '7 Hillhead Rd., Inverness IV2 4RY', 01463232134, NULL, NULL, 'Michael Chen', '46 High St., Inverness', 'Inverness'),
-('AC27', 'House', 6, 800, '10 Arthur St., Stirling, FK8 1JW', 'D169', 'Benjamin Taylor', '34 Springkerse Rd., Stirling FK7 7SN', 01786432987, 'Pharmacy', 07743120548, 'Julie Baker', '3 Dumbarton Rd., Stirling', 'Stirling'),
-('BT35', 'Apartment', 2, 550, '9 Buchanan St., Paisley, PA1 2QT', 'A091', 'Oliver Clark', '6 Abbey Rd., Paisley PA2 6NB', 01418892220, NULL, NULL, 'Alice Johnson', '57 Princes St., Edinburgh', 'Edinburgh'),
-('SP56', 'Flat', 3, 400, '17 Springfield Rd., Perth, PH1 5RY', 'C123', 'Alex Turner', '20 Dunkeld Rd., Perth PH1 5RW', 01738637251, NULL, NULL, 'David Lee', '83 King St., Dundee', 'Dundee'),
-('AB45', 'House', 4, 650, '13 Abbey Rd., Ayr, KA7 2SZ', 'D173', 'Sophie Wilson', '11 Craigie Rd., Ayr KA8 0QJ', 01292483528, 'Supermarket', 07578461329, 'Mary Smith', '23 Union St., Aberdeen','Aberdeen'),
-('GL22', 'House', 4, 600, '23-25 Union St, Glasgow G1 3RB', 'U091', 'Ursula Smith', '27-29 Bath St, Glasgow G2 1HW', 01412861050, 'Marketing', 07385394658, 'Emma Davis', '46 Queen St, Glasgow','Glasgow');
+INSERT INTO prop_registration (p_no, type, rooms, rent, address, own_no, name, per_address, tel_no, business_type, staff_manage, branch_no, city) VALUES
+('P001', 'Flat', 4, 450, '5 Nover Drive, Glasglow, G12 9AX', 'C093', 'Tony Shaw', '12 Park PI, Glasgow G4 OQR', 01412257025, NULL, 'John Smith', 'B001', 'Glasgow'),
+('P002', 'House', 5, 700, '8 Fairview St., Edinburgh, EH11 4PB', 'D102', 'Mary Lee', '4 Queens Dr., Edinburgh EH6 5AE', 01315523431, 'Grocery Store', 'Alice Johnson', 'B001', 'Edinburgh'),
+('P003', 'Flat', 3, 350, '32 Blythswood St., Dundee, DD1 3JX', 'B105', 'Peter Scott', '1 Victoria St., Dundee DD1 2PU', 01382614201, NULL, 'David Lee', 'B001', 'Dundee'),
+('P004', 'Apartment', 2, 500, '11 Lawson St., Aberdeen, AB12 3RT', 'A128', 'Emma Green', '22 Westburn Rd., Aberdeen AB25 2QR', 01224583128, 'Cafe', 'Jennifer Green', 'B002', 'Aberdeen'),
+('P005', 'Flat', 1, 300, '23 Cameron St., Inverness, IV1 1HG', 'B137', 'Jack White', '7 Hillhead Rd., Inverness IV2 4RY', 01463232134, NULL, 'Michael Chen', 'B002', 'Inverness'),
+('P006', 'House', 6, 800, '10 Arthur St., Stirling, FK8 1JW', 'D169', 'Benjamin Taylor', '34 Springkerse Rd., Stirling FK7 7SN', 01786432987, 'Pharmacy', 'Julie Baker', 'B002', 'Stirling'),
+('P007', 'Apartment', 2, 550, '9 Buchanan St., Paisley, PA1 2QT', 'A091', 'Oliver Clark', '6 Abbey Rd., Paisley PA2 6NB', 01418892220, NULL, 'Alice Johnson', 'B003', 'Edinburgh'),
+('P008', 'Flat', 3, 400, '17 Springfield Rd., Perth, PH1 5RY', 'C123', 'Alex Turner', '20 Dunkeld Rd., Perth PH1 5RW', 01738637251, NULL, 'David Lee', 'B003', 'Dundee'),
+('P009', 'House', 4, 650, '13 Abbey Rd., Ayr, KA7 2SZ', 'D173', 'Sophie Wilson', '11 Craigie Rd., Ayr KA8 0QJ', 01292483528, 'Supermarket', 'Mary Smith', 'B003','Aberdeen'),
+('P010', 'House', 4, 600, '23-25 Union St, Glasgow G1 3RB', 'U091', 'Ursula Smith', '27-29 Bath St, Glasgow G2 1HW', 01412861050, 'Marketing', 'Emma Davis', 'B001','Glasgow');
 
  select * from prop_registration;
  
- INSERT INTO payment_details (monthly_rent, payment_method, deposit_paid, rent_start, rent_finish, duration) VALUES 
-(500, 'Cash', 'N', '2022-04-01', '2022-09-30', '6 months'),
-(600, 'Credit Card', 'Y', '2022-01-01', '2022-12-31', '1 year'),
-(550, 'Cheque', 'Y', '2022-05-01', '2022-10-31', '6 months'),
-(700, 'Bank Transfer', 'N', '2022-06-01', '2022-11-30', '6 months'),
-(650, 'Cash', 'N', '2022-07-01', '2023-06-30', '1 year'),
-(750, 'Credit Card', 'Y', '2022-03-01', '2022-08-31', '6 months'),
-(800, 'Cheque', 'Y', '2022-10-01', '2023-09-30', '1 year'),
-(850, 'Bank Transfer', 'N', '2022-09-01', '2023-02-28', '6 months'),
-(900, 'Cash', 'N', '2022-11-01', '2023-10-31', '1 year'),
-(950, 'Credit Card', 'Y', '2022-12-01', '2023-05-31', '6 months');
+--  INSERT INTO payment_details (monthly_rent, payment_method, deposit_paid, rent_start, rent_finish, duration) VALUES 
+-- (500, 'Cash', 'N', '2022-04-01', '2022-09-30', '6 months'),
+-- (600, 'Credit Card', 'Y', '2022-01-01', '2022-12-31', '1 year'),
+-- (550, 'Cheque', 'Y', '2022-05-01', '2022-10-31', '6 months'),
+-- (700, 'Bank Transfer', 'N', '2022-06-01', '2022-11-30', '6 months'),
+-- (650, 'Cash', 'N', '2022-07-01', '2023-06-30', '1 year'),
+-- (750, 'Credit Card', 'Y', '2022-03-01', '2022-08-31', '6 months'),
+-- (800, 'Cheque', 'Y', '2022-10-01', '2023-09-30', '1 year'),
+-- (850, 'Bank Transfer', 'N', '2022-09-01', '2023-02-28', '6 months'),
+-- (900, 'Cash', 'N', '2022-11-01', '2023-10-31', '1 year'),
+-- (950, 'Credit Card', 'Y', '2022-12-01', '2023-05-31', '6 months');
 
-select * from payment_details;
+-- select * from payment_details;

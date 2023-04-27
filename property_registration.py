@@ -14,7 +14,7 @@ mydb = mysql.connector.Connect(
 myc = mydb.cursor()
 
 def func_root():
-    sql = "INSERT INTO PROP_REGISTRATION VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
+    sql = "INSERT INTO PROP_REGISTRATION VALUES (%s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s, %s)"
     val = (
     property_number_entry.get(),
     type_entry.get(),
@@ -26,7 +26,6 @@ def func_root():
     person_business_address_entry.get(),
     telephone_number_entry.get(),
     type_of_business_entry.get(),
-    contact_no_entry.get(),
     managed_by_staff_entry.get(),
     registered_branch_entry.get(),
     city_entry.get(),
@@ -47,7 +46,6 @@ person_business_address_label=Label(root, text="Person/Business Address").place(
 telephone_number_label=Label(root, text="Telephone Number").place(x=50, y=340)
 enter_details_label=Label(root, text="Enter details where applicable",font=("Arial", 11)).place(x=50, y=390)
 type_of_business_label=Label(root, text="Type of Business").place(x=50, y=440)
-contact_no_label=Label(root, text="Contact No").place(x=50, y=480)
 managed_by_staff_label=Label(root, text="Managed By Staff").place(x=50, y=530)
 registered_branch_label=Label(root, text="Registered Branch No").place(x=50, y=570)
 city_label=Label(root, text="City").place(x=50, y=610)
@@ -82,9 +80,6 @@ telephone_number_entry.place(x=190, y=342)
 
 type_of_business_entry=Entry(root, width=60)
 type_of_business_entry.place(x=190, y=442)
-
-contact_no_entry=Entry(root, width=60)
-contact_no_entry.place(x=190, y=482)
 
 managed_by_staff_entry=Entry(root, width=60)
 managed_by_staff_entry.place(x=190, y=532)
