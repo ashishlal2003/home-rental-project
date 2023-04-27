@@ -13,7 +13,8 @@ myc = mydb.cursor()
 
 root = Tk()
 root.title("Lease Form")
-root.geometry('600x630')
+root.geometry('810x450')
+root.configure(bg="#DAF5FF")
 
 def back():
     root.destroy()
@@ -40,50 +41,54 @@ def func_root():
     root.destroy()
     os.system("python main.py")
 
-client_number_label=Label(root, text="Client Number (enter if known)").place(x=50, y=50)
-full_name_label=Label(root, text="Full Name (proot print)").place(x=50, y=90)
-payment_details_label=Label(root, text="Enter payment details").place(x=50, y=140)
-monthly_rent_label=Label(root, text="Monthly Rent").place(x=50, y=190)
-payment_method_label=Label(root, text="Payment Method").place(x=50, y=230)
-deposit_paid_label=Label(root, text="Deposit Paid (Y or N)").place(x=50, y=270)
-property_number_label=Label(root, text="Property Number").place(x=50, y=320)
-property_address_label=Label(root, text="Property Address").place(x=50, y=360)
-rent_start_label=Label(root, text="Rent Start").place(x=50, y=410)
-rent_finish_label=Label(root, text="Rent Finish").place(x=50, y=450)
-duration_label=Label(root, text="Duration").place(x=50, y=490)
+lease_form_head_label = Label(root, text="Lease Form", font=("Arial", 20, "bold"), bg="#DAF5FF", fg="#576CBC")
+lease_form_head_label.place(x=310, y=15)
 
-client_number_entry = Entry(root, width=50)
-client_number_entry.place(x=235, y=52)
+client_number_label=Label(root, text="Client Number", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=40, y=80)
+full_name_label=Label(root, text="Full Name", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=40, y=120)
 
-full_name_entry = Entry(root, width=50)
-full_name_entry.place(x=235, y=92)
+payment_details_label=Label(root, text="Enter payment details", bg="#DAF5FF", fg="#394867",font=("Arial", 14)).place(x=40, y=180)
+monthly_rent_label=Label(root, text="Monthly Rent", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=40, y=230)
+payment_method_label=Label(root, text="Payment Method", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=40, y=270)
+deposit_paid_label=Label(root, text="Deposit Paid (Y or N)", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=40, y=310)
 
-monthly_rent_entry = Entry(root, width=20)
-monthly_rent_entry.place(x=235, y=192)
+property_number_label=Label(root, text="Property Number", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=425, y=80)
+property_address_label=Label(root, text="Property Address", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=425, y=120)
+rent_start_label=Label(root, text="Rent Start", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=455, y=230)
+rent_finish_label=Label(root, text="Rent Finish", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=455, y=270)
+duration_label=Label(root, text="Duration", bg="#DAF5FF", fg="#394867",font=("Arial", 13)).place(x=455, y=310)
 
-payment_method_entry = Entry(root, width=20)
-payment_method_entry.place(x=235, y=232)
+client_number_entry = Entry(root, width=30)
+client_number_entry.place(x=165, y=82)
+
+full_name_entry = Entry(root, width=30)
+full_name_entry.place(x=165, y=122)
+
+monthly_rent_entry = Entry(root, width=25)
+monthly_rent_entry.place(x=190, y=232)
+
+payment_method_entry = Entry(root, width=25)
+payment_method_entry.place(x=190, y=272)
 
 deposit_paid_entry = Entry(root, width=3)
-deposit_paid_entry.place(x=235, y=272)
+deposit_paid_entry.place(x=215, y=312)
 
-property_number_entry = Entry(root, width=50)
-property_number_entry.place(x=235, y=322)
+property_number_entry = Entry(root, width=30)
+property_number_entry.place(x=575, y=82)
 
-property_address_entry = Entry(root, width=50)
-property_address_entry.place(x=235, y=362)
+property_address_entry = Entry(root, width=30)
+property_address_entry.place(x=575, y=122)
 
-rent_start_entry = Entry(root, width=20)
-rent_start_entry.place(x=235, y=412)
+rent_start_entry = Entry(root, width=30)
+rent_start_entry.place(x=575, y=232)
 
-rent_finish_entry = Entry(root, width=20)
-rent_finish_entry.place(x=235, y=452)
+rent_finish_entry = Entry(root, width=30)
+rent_finish_entry.place(x=575, y=272)
 
-duration_entry = Entry(root, width=20)
-duration_entry.place(x=235, y=492)
+duration_entry = Entry(root, width=30)
+duration_entry.place(x=575, y=312)
 
-
-submit_but=Button(root, text="Submit", width=10, bg="purple", fg="white", command=func_root).place(x=50, y=540)
-back=Button(root, text="Back", width=10, bg="grey", fg="white", command=back).place(x=460, y=540)
+submit_but=Button(root, text="Submit", width=10, bg="#3E54AC", fg="white",font=("Arial", 12), command=func_root).place(x=41, y=370)
+back=Button(root, text="Back", width=10, bg="#595260", fg="white",font=("Arial", 12), command=back).place(x=660, y=370)
 
 root.mainloop()
